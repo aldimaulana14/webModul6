@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#showButton').click(function(){
+                $('#gambar').show(); 
+            });
+
+            $('#hideButton').click(function(){
+                $('#gambar').hide(); 
+            });
+        });
+    </script>
+
+    <style>
+        button {
+            padding: 5px 8px;
+            border-radius: 8px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <img src="6p0Q7Eye-image.webp" alt="Gambar" id="gambar" style="width: 300px; display: none;">
+    <br>
+    <button id="showButton">Tampilkan</button>
+    <button id="hideButton">Sembunyikan</button>
+    
+</body>
+</html>

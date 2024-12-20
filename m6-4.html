@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/chart.js"></script>
+</head>
+<body>
+    <h1>Data Tingkat Pendidikan Masyarakat (dalam %)</h1>
+    <h2>Tahun 2024</h2>
+    <canvas id="myPieChart" style="width: 400px; height: 400px;"></canvas>
+    <script>
+        $(document).ready(function(){
+            pieData = {labels: ["SD", "SMP", "SMA"],
+                datasets: [
+                    {data: [50, 30, 20],
+                    backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],},
+                ],
+            };
+            ctxPie = document.getElementById("myPieChart").getContext("2d");
+            myPieChart = new Chart(ctxPie, {
+                type: "pie",
+                data: pieData,
+                options: {
+                    responsive: false,}
+            });
+        });
+    </script>
+</body>
+</html>
